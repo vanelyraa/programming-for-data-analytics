@@ -73,6 +73,19 @@ Finally, to calcutale the difference betwwen regions the script groups the data 
 
 #### Assignment 6 - Weather
 
+Part one of this assignments required to create three plots of Knock’s airport weather data: temperature, mean temperature each day and mean temperature for each month. The libraries imported in this exercise: pandas, matplotlib.pyplot and dates, seaborn.
+
+First the program reads and imports the data into a dataframe named “df” using the pandas read_csv function where parameter .skiprows is applied to ignore the first 23 rows of unnecessary data from the CSV. Headers and first five lines of data are printed out for user reference. The dates on the Dataframe are stored as strings, pandas .to_datetime converts the data into Datetime with format "%d-%b-%Y %H:%M" (day – month – year – hour – minutes) to ensure dates are standardised.
+
+Plotting the temperature: the function plt.figure  enables control over the plot’s size, in this case defined figsize was (12,5) to obtain a wider plot for better data visualization. The plot is created using Seaborn .lineplot where the x-axis are the dates and y-axis is the temperature. A title as well as axis labels added using plt.title, plt.xlabel and plt.ylabel and the graph is displayed to using plt.show.
+
+Mean temperature each day plot: the same plt.figure settings from the previous plot are applied and this second graph is also plotted with Seaborn lineplot. Pandas groupby is used in this assignment, it groups the dataframe by date and temperature, once the data is grouped, the mean is calculated using .mean().
+
+The mean temperature for each month: to plot the monthly date, the date column is grouped using dt.to_period(“M”) where M tells python to group the data in months, after that, date and temperature are grouped using .groupby, and the mean is calculated, the resuted is stored I a variable called “mean_monthly”
+
+When trying execute the plot the following error came up: “argument must be a string or a real number, not 'Period'”, to fix this I used a solution from [Stack Overflow](https://stackoverflow.com/questions/43206554/typeerror-float-argument-must-be-a-string-or-a-number-not-period), convertind the index of “mean_monthly” to a timestamp. The monthly mean values were then plotted using plt.plot, as well as title and axis labels.
+
+ 
 ** End **
 
 

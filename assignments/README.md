@@ -88,6 +88,12 @@ The mean temperature for each month: to plot the monthly date, the date column i
 
 When trying execute the plot the following error came up: “argument must be a string or a real number, not 'Period'”, to fix this I used a solution from [Stack Overflow](https://stackoverflow.com/questions/43206554/typeerror-float-argument-must-be-a-string-or-a-number-not-period), converting the index of “mean_monthly” to a timestamp. The monthly mean values were then plotted using plt.plot, as well as title and axis labels.
 
+In Part 2 we are required to plot windspeed data using Python. Plots are from Matplotlib. First some data manipulation is performed. Windspeed is converted to numeric values, all missing data (windspeed = 0) is replaced by NA, to be ignored by Python and do not ...... calculations. The date column is set as a Dataframe index to facilitate slicing, resamplings, etc.
+The first plot represents windspeed over time. Data is plotted using matplotlib library, x-axis represent the Dataframe dates and y-axis the windspeed.
+The second plot demonstrate the rolling speed over 24 hours using function rolling() and calculating mean.
+The third plot shows max windspeed per day, the data is grouped using resample("D"), and max values fetched by max() function.
+The forth plot monthly mean of the daily max windspeeds, the daily max previously calculated is grouped by month using resample("ME") and then mean is calculated to the plot.
+
  
 ** End **
 

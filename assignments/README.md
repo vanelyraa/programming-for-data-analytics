@@ -13,8 +13,7 @@
     - [Assignment 6](#assignment06-weather.ipynb)
 
 ## Project Purpose
-This repository contains my assignments and project submissions for the Programming for Data Analytics module completed as part of the Higher Diploma in Science in Computing in Data Analytics at ATU.
-The goal of this project is to demonstrate my skills in: Python programming, data retrieval from various sources (URLs, CSV files, JSON), data cleaning and analysis, data manipulation with pandas, statistics calculations, data visualisation using matplotlib and seaborn.
+This repository contains my assignment submissions for the Programming for Data Analytics module completed as part of the Higher Diploma in Science in Computing in Data Analytics at ATU.
 
 ## Install Dependencies
 All required libraries are listed in requirements.txt  

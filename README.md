@@ -18,7 +18,7 @@ The goal of this project is to demonstrate my skills in: Python programming, dat
 ├── project/
 │   ├── README.md
 │   └── project/
-│   └── ...
+│   └── requirements/
 
 ```
 ## Folders
